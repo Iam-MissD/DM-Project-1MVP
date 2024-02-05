@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "xslt",
+            "label": "xslt: Saxon Transform (New)",
+            "saxonJar": "${config:XSLT.tasks.saxonJar}",
+            "xsltFile": "${workspaceFolder}/transform.xsl", // Hier wird der Path zum xslt-File definiert (Transform)
+            "xmlSource": "${workspaceFolder}/source.xml", // Hier wird der Path zum xml-File definiert (Source)
+            "resultPath": "${workspaceFolder}/xslt-out/schooldistrict.html", // Hier wird der Ort und der Name des Output-Files definiert (HTML)
+            "allowSyntaxExtensions40": "off",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$saxon-xslt"
+            ]
+        }
+    ]
+}
